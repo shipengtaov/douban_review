@@ -91,7 +91,7 @@ def do_summary(file, word_count=100):
     transformed = transform_texts(cutted)
     print "summarizing..."
     summarized = gensim.summarization.summarize(' '.join(transformed), word_count=word_count, split=False)
-    
+
     summary = u''
     for s in summarized.split():
         s = s.strip()
@@ -114,7 +114,7 @@ def main():
     parser = ArgumentParser()
     parser.add_argument('-f', '--file', help=u"保存评论的文件名")
     parser.add_argument('-l', '--list', action="store_true", help=u"查看所有评论文件")
-    parser.add_argument('-c', '--word-count', type=int, default=100, help=u"how many words will the output contain?")
+    parser.add_argument('-c', '--word-count', type=int, default=100, help=u"how many words will the output contain? 中文表示词的个数")
     args = parser.parse_args()
 
     if args.list:
