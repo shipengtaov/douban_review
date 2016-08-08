@@ -5,11 +5,11 @@
 
 	$ pip install -r requirements.txt
 
-### 使用
-
-##### 直接使用 example.txt 文件
+Example:
 
 	$ python summary.py -f example.txt
+
+### 使用
 
 #### 抓取数据
 
@@ -18,6 +18,10 @@
 比如抓取<爱宠大机密>的影评:
 
 	$ python crawl.py -u "https://movie.douban.com/subject/21817627/reviews"
+
+查看完整命令：
+
+	$ python crawl.py -h
 
 #### 生成摘要
 
@@ -31,3 +35,6 @@
 
 	$ python summary.py -l
 
+查看完整命令：
+
+	$ python summary.py -h
